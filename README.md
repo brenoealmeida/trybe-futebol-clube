@@ -1,96 +1,68 @@
-# Boas vindas ao repositório do Trybe Futebol Clube!
+# README - Trybe Futebol Clube
+
+Bem-vindo ao repositório do projeto **Trybe Futebol Clube**!
+
+Este projeto é uma aplicação web que permite a gestão e organização de uma liga de futebol. Com o Trybe Futebol Clube, você poderá cadastrar jogadores, agendar partidas, criar times e gerenciar os resultados dos jogos.
+
+## Funcionalidades
+
+O Trybe Futebol Clube possui as seguintes funcionalidades:
+
+1. **Informações dos Times**: É possível visualizar as informações de todos os times ou de um time específico.
+
+2. **Gerenciamento de Pessoas Usuárias**: A aplicação permite a validação de dados de acordo com os as permissões de cada tipo de uauário com retorno de tokens e criptografia de senhas.
+
+3. **Gerenciamento de Resultados**: É possível registrar as partidas em andamento e as finalizadas, informando o time vencedor, o placar e as informações da partida.
+
+4. **Classificação de Times**: A aplicação realiza uma classificação dos times a partir dos resultados registrados e dos critérios de ordenação definidos.
 
 
-## Fluxo 1: Teams (Times)
+## Como utilizar o projeto
 
-- 1 - Desenvolva em `/app/backend/src/database` nas pastas correspondentes, uma migration e um model para a tabela de times
+Para utilizar o Trybe Futebol Clube, siga as instruções abaixo:
 
+1. Faça o clone deste repositório em sua máquina local.
 
-- 2 - (`TDD`) Desenvolva testes que cubram no mínimo 5 por cento dos arquivos em `/app/backend/src`, com um mínimo de 7 linhas cobertas
- 
-- 3 - Desenvolva o endpoint `/teams` no back-end de forma que ele possa retornar todos os times corretamente
+```bash
+git clone https://github.com/brenoealmeida/trybe-futebol-clube.git
+```
 
-- 4 - (`TDD`) Desenvolva testes que cubram no mínimo 10 por cento dos arquivos em `/app/backend/src`, com um mínimo de 19 linhas cobertas
+2. Navegue até o diretório do projeto.
 
-- 5 - Desenvolva o endpoint `/teams/:id` no back-end de forma que ele possa retornar dados de um time específico
+```bash
+cd trybe-futebol-clube
+```
 
+3. Instale as dependências do projeto.
 
-## Fluxo 2: Users e Login (Pessoas Usuárias e Credenciais de acesso)
+```bash
+npm install
+```
 
-- 6 - Desenvolva em `/app/backend/src/database` nas pastas correspondentes, uma migration e um model para a tabela de pessoas usuárias
+4. Execute a aplicação.
 
+```bash
+npm start
+```
 
-- 7 - (`TDD`) Desenvolva testes que cubram no mínimo 15 por cento dos arquivos em `/app/backend/src`, com um mínimo de 25 linhas cobertas
+5. Acesse a aplicação em seu navegador através do seguinte endereço:
 
+```
+http://localhost:3000
+```
 
-- 8 - Desenvolva o endpoint `/login` no back-end de maneira que ele permita o acesso com dados válidos no front-end
+## Tecnologias utilizadas
 
+O projeto Trybe Futebol Clube foi desenvolvido utilizando as seguintes tecnologias:
 
-- 9 - (`TDD`) Desenvolva testes que cubram no mínimo 20 por cento dos arquivos em `/app/backend/src`, com um mínimo de 35 linhas cobertas
+- TypeScript
+- Node.js
+- Express.js
+- Sequelize
+- Docker
+- Javascript
 
+## Autores
 
-- 10 - Desenvolva o endpoint `/login` no back-end de maneira que ele não permita o acesso com um email não cadastrado ou senha incorreta no front-end
-
-- 11 - (`TDD`) Desenvolva testes que cubram no mínimo 30 por cento dos arquivos em `/app/backend/src`, com um mínimo de 45 linhas cobertas
-
-- 12 - Desenvolva um middleware de validação para o `token`, verificando se ele é válido, e desenvolva o endpoint `/login/role` no back-end de maneira que ele retorne os dados corretamente no front-end
-
-
-## Fluxo 3: Matches (Partidas)
-
-
-- 13 - Desenvolva em `/app/backend/src/database` nas pastas correspondentes, uma migration e um model para a tabela de partidas
-
-
-- 14 - (`TDD`) Desenvolva testes que cubram no mínimo 45 por cento dos arquivos em `/app/backend/src`, com um mínimo de 70 linhas cobertas
-
-
-- 15 - Desenvolva o endpoint `/matches` de forma que os dados apareçam corretamente na tela de partidas no front-end
-
-
-- 16 - Desenvolva o endpoint `/matches` de forma que seja possível filtrar somente as partidas em andamento, e também filtrar somente as partidas finalizadas, na tela de partidas do front-end
-
-
-- 17 - Desenvolva o endpoint `/matches/:id/finish` de modo que seja possível finalizar uma partida no banco de dados
-
-
-- 18 - Desenvolva o endpoint `/matches/:id` de forma que seja possível atualizar partidas em andamento
-
-- 19 - (`TDD`) Desenvolva testes que cubram no mínimo 60 por cento dos arquivos em `/app/backend/src`, com um mínimo de 80 linhas cobertas
-
-- 20 - Desenvolva o endpoint `/matches` de modo que seja possível cadastrar uma nova partida em andamento no banco de dados
-
-
-- 21 - Desenvolva o endpoint `/matches` de forma que não seja possível inserir uma partida com times iguais nem com um time que não existe na tabela de times
-
-
-## Fluxo 4: Leaderboards (Placares)
-
-
-- 22 - (`Bônus`; `TDD`) Desenvolva testes que cubram no mínimo 80 por cento dos arquivos em `/app/backend/src`, com um mínimo de 100 linhas cobertas
-
-
- - 23 - Desenvolva o endpoint `/leaderboard/home` de forma que retorne as informações do desempenho dos times da casa com as seguintes propriedades: `name`, `totalPoints`, `totalGames`, `totalVictories`, `totalDraws`, `totalLosses`, `goalsFavor` e `goalsOwn`
-
-
-
-- 24 - Desenvolva o endpoint `/leaderboard/home` de forma que seja possível filtrar as classificações dos times da casa na tela de classificação do front-end com os dados iniciais do banco de dados, incluindo as propriedades `goalsBalance` e `efficiency`, além das propriedades do requisito anterior
-
-
-- 25 - Desenvolva o endpoint `/leaderboard/home` de forma que seja possível filtrar as classificações dos times da casa na tela de classificação do front-end, e atualizar a tabela ao inserir a partida Corinthians 2 X 1 Internacional
-
-
-- 26 - Desenvolva o endpoint `/leaderboard/away` de forma que retorne as informações do desempenho dos times visitantes com as seguintes propriedades: `name`, `totalPoints`, `totalGames`, `totalVictories`, `totalDraws`, `totalLosses`, `goalsFavor` e `goalsOwn`
-
-
-- 27 - Desenvolva o endpoint `/leaderboard/away`, de forma que seja possível filtrar as classificações dos times quando visitantes na tela de classificação do front-end, com os dados iniciais do banco de dados, incluindo as propriedades `goalsBalance` e `efficiency`, além das propriedades do requisito anterior
-
-
-- 28 - Desenvolva o endpoint `/leaderboard/away` de forma que seja possível filtrar as classificações dos times quando visitantes na tela de classificação do front-end e atualizar a tabela ao inserir a partida Corinthians 2 X 1 Internacional
-
-
-- 29 - Desenvolva o endpoint `/leaderboard` de forma que seja possível filtrar a classificação geral dos times na tela de classificação do front-end com os dados iniciais do banco de dados
-
-
-- 30 - (`Bônus`) Desenvolva o endpoint `/leaderboard` de forma que seja possível filtrar a classificação geral dos times na tela de classificação do front-end e atualizar a tabela ao inserir a partida Flamengo 3 X 0 Napoli-SC
+Este projeto foi desenvolvido por [Breno Almeida](https://github.com/brenoealmeida).
 
